@@ -9,7 +9,7 @@ INJECTED from /home/irin/Desktop/Project/phonebook/platforms/android/app/src/mai
 INJECTED from /home/irin/Desktop/Project/phonebook/platforms/android/app/src/main/AndroidManifest.xml:2:1-17:12
 INJECTED from /home/irin/Desktop/Project/phonebook/platforms/android/app/src/main/AndroidManifest.xml:2:1-17:12
 	package
-		ADDED from /home/irin/Desktop/Project/phonebook/platforms/android/app/src/main/AndroidManifest.xml:2:102-135
+		ADDED from /home/irin/Desktop/Project/phonebook/platforms/android/app/src/main/AndroidManifest.xml:2:102-132
 		INJECTED from /home/irin/Desktop/Project/phonebook/platforms/android/app/src/main/AndroidManifest.xml
 		INJECTED from /home/irin/Desktop/Project/phonebook/platforms/android/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -19,7 +19,7 @@ INJECTED from /home/irin/Desktop/Project/phonebook/platforms/android/app/src/mai
 	android:hardwareAccelerated
 		ADDED from /home/irin/Desktop/Project/phonebook/platforms/android/app/src/main/AndroidManifest.xml:2:11-45
 	xmlns:android
-		ADDED from /home/irin/Desktop/Project/phonebook/platforms/android/app/src/main/AndroidManifest.xml:2:136-194
+		ADDED from /home/irin/Desktop/Project/phonebook/platforms/android/app/src/main/AndroidManifest.xml:2:133-191
 	android:versionCode
 		ADDED from /home/irin/Desktop/Project/phonebook/platforms/android/app/src/main/AndroidManifest.xml:2:46-73
 		INJECTED from /home/irin/Desktop/Project/phonebook/platforms/android/app/src/main/AndroidManifest.xml
@@ -52,7 +52,7 @@ ADDED from /home/irin/Desktop/Project/phonebook/platforms/android/app/src/main/A
 		ADDED from /home/irin/Desktop/Project/phonebook/platforms/android/app/src/main/AndroidManifest.xml:5:18-52
 	android:icon
 		ADDED from /home/irin/Desktop/Project/phonebook/platforms/android/app/src/main/AndroidManifest.xml:5:53-80
-activity#io.cordova.hellocordova.MainActivity
+activity#io.cordova.phonebook.MainActivity
 ADDED from /home/irin/Desktop/Project/phonebook/platforms/android/app/src/main/AndroidManifest.xml:6:9-11:20
 	android:label
 		ADDED from /home/irin/Desktop/Project/phonebook/platforms/android/app/src/main/AndroidManifest.xml:6:97-134
