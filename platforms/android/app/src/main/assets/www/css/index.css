@@ -1,0 +1,36 @@
+*{box-sizing:border-box;}
+
+#box{
+	background-color:orange;
+	text-align:center;
+	opacity:0.9;
+	width:80%;
+	margin-left:10%;
+	border-radius:7%;
+	padding:2px;
+	box-sizing:border-box;
+	transform: rotate(10deg);
+	box-shadow: 10px 10px 2px grey;
+}
+#heading{
+	font-size:25px;
+	font-family:Courier;
+	color:white;
+	text-align:center;
+}
+
+#cbub1{
+	background-color:yellow;
+	text-align:center;
+	opacity:0.9;
+	width:30%;
+	margin-left:35%;
+	border-radius:100%;
+	padding:2px;
+	box-sizing:border-box;
+	transform: rotate(10deg);
+	box-shadow: 10px 10px 2px grey;
+	font-size:15px;
+	font-family:Courier;
+	color:white;
+}
