@@ -38,9 +38,13 @@ function contactSuccess(contacts){
 			dp.src="img/default_pic.jpg";
 		}
 		
+
+		t=document.createTextNode(name);
 		
 		textbox.appendChild(dp);
-		textbox.innerHTML=name;
+		//textbox.innerHTML=dp;
+		textbox.appendChild(t);
+		//textbox.innerHTML=name;
 		
 		//slot.appendChild(name);
 		//document.body.appendChild(dp);
