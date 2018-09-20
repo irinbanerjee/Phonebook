@@ -1,3 +1,13 @@
+/*function compare(a,b) {
+	var str1=a.displayName.toUpperCase();
+	var str2=b.displayName.toUpperCase();
+  if (str1< str2)
+     return -1;
+  if (str1> str2)
+    return 1;
+  return 0;
+}*/
+
 function compare(a,b) {
   if (a.displayName< b.displayName)
      return -1;
@@ -6,40 +16,36 @@ function compare(a,b) {
   return 0;
 }
 
-function contact_bubble(bubble,i){
-	if(i%2==0){
-		bubble.setAttribute('id', 'cbub1');
-	}
-	else{
-		bubble.setAttribute('id', 'cbub2');
-	}
-}
 
 
 function contactSuccess(contacts){
 	contacts.sort(compare);
 	for(var i=0;i<contacts.length;++i){
-		var name=contacts[i].displayName;
+		//var slot=document.getElementById('contact_list'); 
+ 		var name=contacts[i].displayName;
+		
+		//NAME TEXT 
+		var textbox=document.createElement('div');  
+		textbox.setAttribute('class', 'cbub1');
 			
-		//NAME TEXT BUBBLE
-		var bubble=document.createElement('div');  
-		contact_bubble(bubble,i);
-		bubble.innerHTML=name;
-			
-
-		//PROFILE PICTURE BUBBLE
+		//PROFILE PICTURE
 		var dp=document.createElement('img');  
-		dp.setAttribute('id', 'pbub1');
+		dp.setAttribute('class', 'pbub1');
 		if(contacts[i].photos!=null){
 			dp.src=contacts[i].photos[0].value;
 		}
 		else{
-			dp.src="img/avatar.png";
+			dp.src="img/default_pic.jpg";
 		}
 		
-		bubble.appendChild(dp);
 		
-		document.body.appendChild(bubble); 
+		textbox.appendChild(dp);
+		textbox.innerHTML=name;
+		
+		//slot.appendChild(name);
+		//document.body.appendChild(dp);
+		document.body.appendChild(textbox); 
+		console.dir(contacts[i]);
 	}
 }
 
