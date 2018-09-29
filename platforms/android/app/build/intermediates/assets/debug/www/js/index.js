@@ -7,6 +7,22 @@ function compare(a,b) {
   return 0;
 }
 
+
+//CALLBACK FUNCTIONS FOR SENDING SMS
+function success(){
+	alert("Message sent successfully.");
+}
+
+function fail(){
+	alert("Error occurred.");
+}
+
+//SETS WETHER TO USE NATIVE APP OR NOT
+function options(){
+	intent='INTENT';
+}
+
+
 //CREATES SMS POPUP
 function create(popup,c,n1){
 	var header=document.createElement('div');  
@@ -20,10 +36,13 @@ function create(popup,c,n1){
 	var t=document.createTextNode("NEW MESSAGE");
 	header.appendChild(t);
 	header.appendChild(back_button);
+	header.addEventListener("click",function(){
+		popup.style.display="none";
+	});
 	popup.appendChild(header);
+	
 
 	var x = document.createElement("FORM");
-   	//x.setAttribute("id", "myForm");
     	popup.appendChild(x);
 	
 	/*
@@ -61,9 +80,19 @@ function create(popup,c,n1){
 	x.appendChild(y);
 
 	var sub=document.createElement("INPUT");
-	sub.setAttribute("type", "submit");
+	sub.setAttribute("type", "button");
 	sub.setAttribute("class","cbub4");
 	sub.setAttribute("value", "SEND");
+
+
+
+	sub.addEventListener("click",function(){
+		alert(c.phoneNumbers[0].value);
+		sms.send(c.phoneNumbers[0].value,y.value,options,success,fail);
+		y.value=null;
+		popup.style.display="none";
+		
+      	});
 	x.appendChild(sub);
 
 	
@@ -110,7 +139,7 @@ function contactSuccess(contacts){
 		//CLICKING CONTACT OPENS POPUP
 		textbox.addEventListener("click",function(){
 			popup.style.display="block";
-			console.dir(contacts[i]);
+			//console.dir(contacts[i]);
 		});
 		
 		document.addEventListener("backbutton",function(){

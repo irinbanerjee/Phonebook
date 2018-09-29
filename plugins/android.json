@@ -15,6 +15,9 @@
     },
     "cordova-sms-plugin": {
       "PACKAGE_NAME": "io.dontmindme.phonebook"
+    },
+    "cordova-plugin-sms": {
+      "PACKAGE_NAME": "com.dontmindme.phonebook"
     }
   },
   "dependent_plugins": {}

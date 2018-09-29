@@ -84,6 +84,14 @@ module.exports = [
     "clobbers": [
       "window.sms"
     ]
+  },
+  {
+    "id": "cordova-plugin-sms.SMS",
+    "file": "plugins/cordova-plugin-sms/www/SMS.js",
+    "pluginId": "cordova-plugin-sms",
+    "clobbers": [
+      "window.SMS"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -91,7 +99,8 @@ module.exports.metadata =
 {
   "cordova-plugin-whitelist": "1.3.3",
   "cordova-plugin-contacts": "3.0.1",
-  "cordova-sms-plugin": "0.1.13"
+  "cordova-sms-plugin": "0.1.13",
+  "cordova-plugin-sms": "1.0.5"
 };
 // BOTTOM OF METADATA
 });
