@@ -113,6 +113,9 @@ function contactSuccess(contacts){
 			console.dir(contacts[i]);
 		});
 		
+		document.addEventListener("backbutton",function(){
+			popup.style.display="none";
+		});
 		//console.dir(contacts[i]);
 	
 }
@@ -125,6 +128,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
 var contactFields=["*"];
 navigator.contacts.find(contactFields, contactSuccess);
+
 }
 
 
