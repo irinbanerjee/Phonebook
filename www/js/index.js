@@ -96,7 +96,7 @@ function create(c){
 
 
 	sub.addEventListener("click",function(){
-		alert(c.phoneNumbers[0].value);
+		//alert(c.phoneNumbers[0].value);
 		sms.send(c.phoneNumbers[0].value,y.value,options,success,fail);
 		y.value=null;
 		popup.style.display="none";

@@ -96,7 +96,7 @@ function create(c){
 
 
 	sub.addEventListener("click",function(){
-		alert(c.phoneNumbers[0].value);
+		//alert(c.phoneNumbers[0].value);
 		sms.send(c.phoneNumbers[0].value,y.value,options,success,fail);
 		y.value=null;
 		popup.style.display="none";
@@ -106,7 +106,7 @@ function create(c){
 	popup.style.display="block";
 	state=1;
 	if(state==1){
-		alert(state);
+		//alert(state);
 		document.addEventListener("backbutton",function(){
 			popup.style.display="none";
 			state=0;//alert(state);	
