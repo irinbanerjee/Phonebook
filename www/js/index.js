@@ -1,3 +1,4 @@
+var state=0 //phonebook open,1 sms open
 //CALLBACK FUNCTION FOR SORTING NAMES IN ALPHABETICAL ORDER
 function compare(a,b) {
   if (a.displayName< b.displayName)
@@ -103,7 +104,14 @@ function create(c){
       	});
 	x.appendChild(sub);
 	popup.style.display="block";
-	
+	state=1;
+	if(state==1){
+		//alert(state);
+		document.addEventListener("backbutton",function(){
+			popup.style.display="none";
+			state=0;//alert(state);	
+	});
+	}
 	
 }
 
@@ -145,9 +153,6 @@ function contactSuccess(contacts){
 			//console.dir(contacts[i]);
 		});
 		
-		document.addEventListener("backbutton",function(){
-			popup.style.display="none";
-		});
 		//console.dir(contacts[i]);
 	
 }
@@ -160,6 +165,11 @@ document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
 var contactFields=["*"];
 navigator.contacts.find(contactFields, contactSuccess);
+document.addEventListener("backbutton",function (){
+	if(state==0){
+		navigator.app.exitApp();
+	}
+});
 
 }
 
