@@ -24,7 +24,15 @@ function options(){
 
 
 //CREATES SMS POPUP
-function create(popup,c,n1){
+function create(c){
+	//CREATING SMS POPUP
+	var popup=document.createElement('div');  
+	popup.setAttribute('class','sms');
+	document.body.appendChild(popup);
+	var name1=c.displayName;
+	var t1=document.createTextNode(name1);
+		
+	//ADDING HEADER MENU    
 	var header=document.createElement('div');  
 	header.setAttribute('class', 'cbub2');
 	
@@ -64,7 +72,7 @@ function create(popup,c,n1){
 	//var n=document.createTextNode(n1);
 	var tbox=document.createElement('div');  
 	tbox.setAttribute('class', 'cbub2');
-	tbox.appendChild(n1);
+	tbox.appendChild(t1);
 
 
 
@@ -94,7 +102,8 @@ function create(popup,c,n1){
 		
       	});
 	x.appendChild(sub);
-
+	popup.style.display="block";
+	
 	
 }
 
@@ -128,17 +137,11 @@ function contactSuccess(contacts){
 		//ADDING CONTACT SLOT TO MAIN BODY
 		document.body.appendChild(textbox); 
 
-		//CREATING SMS POPUP
-		var popup=document.createElement('div');  
-		popup.setAttribute('class','sms');
-		var name1=contacts[i].displayName;
-		var t1=document.createTextNode(name1);
-		create(popup,contacts[i],t1);      
-		document.body.appendChild(popup); 
+		 
 
 		//CLICKING CONTACT OPENS POPUP
 		textbox.addEventListener("click",function(){
-			popup.style.display="block";
+			create(contacts[i]);  
 			//console.dir(contacts[i]);
 		});
 		
@@ -159,5 +162,4 @@ var contactFields=["*"];
 navigator.contacts.find(contactFields, contactSuccess);
 
 }
-
 
