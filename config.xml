@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.dontmindme.phonebook" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>PhoneBook</name>
+    <name>Send SMS</name>
     <description>
         A Phonebook from where messages can be sent to contacts at a pregiven timespace.
     </description>
@@ -22,6 +22,12 @@
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
+    </platform>
+    <platform name="android">
+        <icon density="ldpi" src="res/icon/android/36.png" />
+        <icon density="mdpi" src="res/icon/android/48.png" />
+        <icon density="hdpi" src="res/icon/android/72.png" />
+        <icon density="xhdpi" src="res/icon/android/96.png" />
     </platform>
     <plugin name="cordova-plugin-contacts" spec="^3.0.1" />
     <plugin name="cordova-sms-plugin" spec="^0.1.13" />

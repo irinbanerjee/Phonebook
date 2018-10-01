@@ -13,7 +13,7 @@
     <feature name="SMS">
         <param name="android-package" value="com.rjfun.cordova.sms.SMSPlugin" />
     </feature>
-    <name>PhoneBook</name>
+    <name>Send SMS</name>
     <description>
         A Phonebook from where messages can be sent to contacts at a pregiven timespace.
     </description>
@@ -29,5 +29,9 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
+    <icon density="ldpi" src="res/icon/android/36.png" />
+    <icon density="mdpi" src="res/icon/android/48.png" />
+    <icon density="hdpi" src="res/icon/android/72.png" />
+    <icon density="xhdpi" src="res/icon/android/96.png" />
     <preference name="loglevel" value="DEBUG" />
 </widget>
